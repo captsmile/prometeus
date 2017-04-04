@@ -4,6 +4,8 @@ package com.tasks3.carddeck;
  * Created by admin on 04.04.2017.
  */
 public class Deck {
+    private Card card;
+    private int numberCard;
 
     //Перемішує колоду у випадковому порядку
     public void shuffle() {
@@ -24,15 +26,19 @@ public class Deck {
     * HEARTS 6
     * І так далі для DIAMONDS, CLUBS, SPADES */
     public void order() {
+        //Card card = new Card(new Rank(), new Suit());
     }
 
     //Повертає true у випадку коли в колоді ще доступні карти
     public boolean hasNext() {
+        return true;
     }
 
     //"Виймає" одну карту з колоди, коли буде видано всі 36 карт повертає null
     //Карти виймаються з "вершини" колоди. Наприклад перший виклик видасть SPADES 6 потім
     //SPADES 7, ..., CLUBS 6, ..., CLUBS Ace і так далі до HEARTS Ace
     public Card drawOne() {
+        numberCard--;
+        return card;
     }
 }
