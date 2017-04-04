@@ -1,5 +1,7 @@
 package com.tasks3.carddeck;
 
+import java.util.Random;
+
 /**
  * Created by admin on 04.04.2017.
  */
@@ -7,8 +9,22 @@ public class Deck {
     private int numberCard = 36;
     private Card[] card = new Card[numberCard];
 
+    public Deck(){
+        order();
+    }
     //Перемішує колоду у випадковому порядку
     public void shuffle() {
+        order();
+        Card tempcard;
+        for (int i=0;i<numberCard;i++)
+        {
+            int ran = new Random().nextInt();
+            ran = (ran*(numberCard));
+            tempcard = card[i];
+            card[i] = card[ran];
+            card[ran] = tempcard;
+        }
+
     }
     /* * Впорядкування колоди за мастями та значеннями
     * Порядок сотрування:
@@ -51,6 +67,11 @@ public class Deck {
     }
 
     public static void main(String[] args) {
+        Deck d = new Deck();
+        for (int i=0;i<36;i++)
+        {
+            System.out.println(d.drawOne());
+        }
         //for (int i=1;i<=n)
         //System.out.println(Suit.CLUBS.getName());
     }
