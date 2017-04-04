@@ -13,7 +13,7 @@ public class Suit {
 
     private String name;
 
-    Suit(String name) {
+    private Suit(String name) {
         this.name = name;
     }
 
