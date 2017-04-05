@@ -9,20 +9,17 @@ public class Deck {
     private int numberCard = 36;
     private Card[] card = new Card[numberCard];
 
-    public Deck(){
-        order();
-    }
     //Перемішує колоду у випадковому порядку
     public void shuffle() {
         order();
-        Card tempcard;
+        Card card;
         for (int i=0;i<numberCard;i++)
         {
-            int ran = new Random().nextInt();
-            ran = (ran*(numberCard));
-            tempcard = card[i];
-            card[i] = card[ran];
-            card[ran] = tempcard;
+            //int ran = new Random().nextInt(1);
+            int ran = (int)(Math.random() * ((numberCard-1) + 1));
+            card = this.card[i];
+            this.card[i] = this.card[ran];
+            this.card[ran] = card;
         }
 
     }
@@ -44,13 +41,22 @@ public class Deck {
     public void order() {
         for (int i=0;i<numberCard;i++)
             {
-                card[i]=new Card(Rank.values[i/4],Suit.values[i/4]);
+                //System.err.println(i%9 + " " + i/9);
+                //System.err.println(Rank.values[i%9].getName() + " " + Suit.values[i/9].getName());
+                card[i]=new Card(Rank.values[i%9],Suit.values[i/9]);
             }
     }
 
     //Повертає true у випадку коли в колоді ще доступні карти
     public boolean hasNext() {
-        return true;
+        if (numberCard == 0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
 
     //"Виймає" одну карту з колоди, коли буде видано всі 36 карт повертає null
@@ -68,9 +74,11 @@ public class Deck {
 
     public static void main(String[] args) {
         Deck d = new Deck();
+        d.shuffle();
         for (int i=0;i<36;i++)
         {
-            System.out.println(d.drawOne());
+            Card c = d.drawOne();
+            System.out.println(c.getRank().getName() + " " + c.getSuit().getName());
         }
         //for (int i=1;i<=n)
         //System.out.println(Suit.CLUBS.getName());
