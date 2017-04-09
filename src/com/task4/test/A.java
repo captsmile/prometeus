@@ -5,11 +5,10 @@ package com.task4.test;
  */
 class A
 {
-    void Test()
-    {
-        /*enum Demo
-        {
-
-        }*/
+    public static void main(String[] args) {
+        //int a = new OuterClass.InnerClass().i;
+        Demo3.Seasons a = Demo3.Seasons.WINTER;
+        System.out.println("season.name()=" + a.name() + " season.toString()=" + a.toString() + " season.ordinal()=" + a.ordinal());
+        System.out.println(Demo3.Seasons.class.getSuperclass());
     }
 }
