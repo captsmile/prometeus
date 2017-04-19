@@ -6,7 +6,7 @@ package net.proselite.core.sync;
 public class SynchThread extends Thread {
     private Thread thread;
     private String threadName;
-    final Counter counter;
+    Counter counter;
 
     public SynchThread(String threadName, Counter counter) {
         this.threadName = threadName;
