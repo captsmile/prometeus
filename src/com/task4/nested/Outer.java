@@ -28,7 +28,7 @@ public class Outer {
         };
         Thread t = new Thread(new Runnable(){
             public void run(){
-                
+
             }
         });
     }

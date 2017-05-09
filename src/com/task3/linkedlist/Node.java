@@ -1,4 +1,4 @@
-package com.tasks3.linkedlist;
+package com.task3.linkedlist;
 
 /**
  * Created by admin on 07.03.2017.

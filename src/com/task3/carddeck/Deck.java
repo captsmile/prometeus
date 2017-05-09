@@ -1,6 +1,4 @@
-package com.tasks3.carddeck;
-
-import java.util.Random;
+package com.task3.carddeck;
 
 /**
  * Created by admin on 04.04.2017.

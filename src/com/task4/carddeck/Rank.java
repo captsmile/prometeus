@@ -16,6 +16,8 @@ public class Rank {
 
     public static Rank[] values = { ACE, KING, QUEEN, JACK, TEN, NINE, EIGHT, SEVEN, SIX };
 
+    enum Ranks { ACE, KING, QUEEN, JACK, TEN, NINE, EIGHT, SEVEN, SIX };
+
     private String name;
 
     Rank(String name) {

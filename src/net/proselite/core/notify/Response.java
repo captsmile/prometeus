@@ -11,6 +11,7 @@ public class Response implements Runnable {
                     "Aeroflot 1816, descend to altitude 6,000 feet"
             };
 
+
     public Response(ThreadsInteraction interaction) {
         this.interaction = interaction;
         new Thread(this, "Response").start();

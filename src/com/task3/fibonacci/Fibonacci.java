@@ -1,4 +1,4 @@
-package com.tasks3.fibonacci;
+package com.task3.fibonacci;
 
 public class Fibonacci
 {

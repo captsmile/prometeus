@@ -1,4 +1,4 @@
-package com.tasks3.carddeck;
+package com.task3.carddeck;
 
 /**
  * Created by admin on 04.04.2017.
