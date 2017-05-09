@@ -1,4 +1,4 @@
-package com.demo.tictactoe;
+package com.task4.tictactoe;
 
 
 public class Player {
